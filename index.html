@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Driver Behaviour Detection</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Driver Behaviour Detection</h1>
+    <p class="subtitle">Real-time webcam demo using your custom YOLO model</p>
+
+    <div class="controls">
+      <button id="loadModelBtn">Load Model</button>
+      <button id="startBtn" disabled>Start Camera</button>
+      <button id="stopBtn" disabled>Stop Camera</button>
+    </div>
+
+    <p id="status">Status: waiting to load model...</p>
+
+    <div class="viewer">
+      <video id="video" autoplay playsinline muted></video>
+      <canvas id="canvas"></canvas>
+    </div>
+
+    <div class="info-grid">
+      <div class="card">
+        <h3>Detected Behaviours</h3>
+        <ul id="detectionsList">
+          <li>No detections yet</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Classes</h3>
+        <ul>
+          <li>eye close</li>
+          <li>eye close glass</li>
+          <li>eye open</li>
+          <li>eye open glass</li>
+          <li>phone use</li>
+          <li>yawn</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
