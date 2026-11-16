@@ -1,55 +1,121 @@
-\# Driver Behaviour Detection
-🚀 Live Demo
+# 🚗 Driver Behaviour Detection Using YOLO
 
-https://arpitaai.github.io/-Driver-Behaviour-Detection/
+A real-time driver behaviour detection system built using a custom-trained YOLO model. The project detects driver eye conditions, phone usage, and yawning to demonstrate potential driver drowsiness and distraction monitoring.
+
+## 🚀 Live Demo
+
+**[▶ Launch Driver Behaviour Detection Demo](https://arpitaai.github.io/-Driver-Behaviour-Detection/)**
 
 Try the browser-based demo using your webcam. Allow camera access when prompted.
 
+## 📌 Project Overview
 
+This project implements real-time driver behaviour monitoring using a custom-trained YOLO model.
 
-Real-time driver behaviour detection using a custom YOLO model.
+The system identifies different driver behaviours through visual detection and displays predictions directly in the browser.
 
+## 🎯 Detection Classes
 
+The model detects six driver behaviour categories:
 
-\## Classes
+- Eye Close
+- Eye Close with Glasses
+- Eye Open
+- Eye Open with Glasses
+- Phone Use
+- Yawn
 
-\- eye close
+## 🖥️ Live Application Features
 
-\- eye close glass
+- Browser-based webcam demonstration
+- Custom YOLO model integration
+- ONNX model inference
+- Real-time camera interaction
+- Visual detection results
+- Start and stop camera controls
 
-\- eye open
+## 🧠 Technologies Used
 
-\- eye open glass
+- Python
+- YOLO
+- PyTorch
+- ONNX
+- OpenCV
+- HTML
+- CSS
+- JavaScript
 
-\- phone use
+## 📂 Project Structure
 
-\- yawn
+```text
+Driver-Behaviour-Detection/
+│
+├── desktop/
+│   └── Original Python/OpenCV application
+│
+├── model/
+│   └── best.onnx
+│
+├── index.html
+├── style.css
+├── app.js
+├── requirements.txt
+└── README.md
+```
 
+## ⚙️ Run the Local Python Version
 
-
-\## Project parts
-
-\- `desktop/` -> original Python/OpenCV local version
-
-\- `model/best.onnx` -> web deployment model
-
-\- `index.html`, `style.css`, `app.js` -> browser-based live demo
-
-
-
-\## Local Python version
+Clone the repository:
 
 ```bash
+git clone https://github.com/ArpitaAI/-Driver-Behaviour-Detection.git
+```
 
-cd desktop
+Navigate to the desktop directory:
 
+```bash
+cd Driver-Behaviour-Detection/desktop
+```
+
+Create a virtual environment:
+
+```bash
 python -m venv venv
+```
 
-venv\\Scripts\\activate
+Activate it on Windows:
 
-pip install -r ..\\requirements.txt
+```bash
+venv\Scripts\activate
+```
 
-python yolo\_detect.py --model best.pt --source usb0
+Install dependencies:
+
+```bash
+pip install -r ../requirements.txt
+```
+
+Run the detection application:
+
+```bash
+python yolo_detect.py --model best.pt --source usb0
+```
+
+## 🌐 Deployment
+
+The browser-based application is hosted using **GitHub Pages**.
+
+The live demo uses the ONNX model for browser-based inference.
+
+## 👩‍💻 Author
+
+**Arpita Islam**
+
+GitHub: [@ArpitaAI](https://github.com/ArpitaAI)
+
+---
+
+⭐ If you find this project interesting, feel free to explore the repository and try the live demo.
 
 
 
